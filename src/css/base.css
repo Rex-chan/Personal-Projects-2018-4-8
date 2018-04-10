@@ -288,6 +288,32 @@ s, i, em {
   font-size: 18px;
 }
 
+#s_submenu {
+  border-bottom: 3px solid #fc0;
+  background: #fff;
+  height: 225px;
+}
+
+#s_submenu .container {
+  height: 225px;
+  padding-top: 20px;
+}
+
+#s_submenu .container h4 {
+  font-weight: 600;
+  line-height: 40px;
+}
+
+#s_submenu .container ul {
+  float: left;
+  margin-right: 30px;
+}
+
+#s_submenu .container ul a {
+  font-size: 14px;
+  color: #656158;
+}
+
 #s_footer {
   background: #F5F5F5;
 }

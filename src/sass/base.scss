@@ -165,6 +165,19 @@ $color:#000000;
 		.find{width: 40px;height: 38px;color:$highLight;font-size: 18px;}
 	}
 }
+#s_submenu{
+    border-bottom:3px solid #fc0;
+    background:#fff;
+    height: 225px;
+    .container{
+
+        height: 225px;padding-top:20px;
+        h4{font-weight:600;line-height: 40px;}        
+            ul{float: left;margin-right:30px;
+                a{font-size: 14px;color:#656158;}
+        }
+    }
+}
 #s_footer{
 	background:#F5F5F5;
 	.footer_t{height: 134px;padding-top:39px;
