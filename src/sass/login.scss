@@ -7,7 +7,6 @@
     visibility:hidden;
     zoom:1;
 }
-
 a { text-decoration:none; }
 /*color:#666;*/
 /*a:hover{color:#C81623;}*/
@@ -42,24 +41,28 @@ s,i,em{font-style:normal;text-decoration:none;}
 .font14{ font-size: 14px;}
 .font16{ font-size: 16px;}
 #s_header{
-    margin:0;
     background:#323131;
     a{line-height: 70px;color:#fff;font-size: 14px;}  
 }
 #s_main{
+    
     background-color:#FDF8F4;
-    .register{width: 375px;height: 495px;margin-top:150px;background:#fff;
-        .main{
-            padding:35px;
-            p{margin:10px 0;font-size: 14px;color:#666;}
-            span{font-size: 16px;color:#999;}
-            input{width: 100% ;height: 41px;border:1px solid #ddd;}
-            .checkbox{width: 13px;height: 13px;margin-bottom:20px;}
-            .submit{width: 100%;background:#F19108;color:#fff;}
+    .register{width: 375px;height: 495px;margin-top:150px;background:#fff;border:1px solid #ccc;box-shadow:0px 0px  4px 2px #ccc;
+        .saoma{width: 187px;height: 85px;line-height: 85px;font-size: 22px;text-align:center;}
+        .zhanghao{width: 187px;height: 85px;line-height: 85px;font-size: 22px;text-align:center;}
+        .inputs{margin-left:36px;
+            margin-right:36px;font-size: 12px;
+            #username{width: 310px;height: 50px;border:1px solid #ccc;font-size: 14px;}
+            #password{width: 310px;height: 50px;border:1px solid #ccc;margin-top:16px;font-size: 14px;}
+            .submit{background-color: #f19108;font-size: 16px;color: #fff;font-weight: bold;text-align: center;width: 100%;height: 50px;line-height: 50px;border:0;margin-top:40px;}
         }
+
     }
 
 }
+
+
+
 
 #s_footer{
     background:#F5F5F5;

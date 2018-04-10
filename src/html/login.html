@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>register</title>
-    <link rel="stylesheet" type="text/css" href="../css/register.css" />
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
 
 </head>
 <body>
@@ -22,18 +22,18 @@
             <div class="container">
                 <img src="../img/register_banner.png" height="788" width="820" alt="" />
                 <div class="register  fr clearfix">
-                    <div class="main">
-                        <p>用户名<span class="fr usernametext "></span></p>
-                        <input type="text" id="username"placeholder="必须以字母开头，长度6-20" /><br />
-                        <p>密码<span class="fr passwordtext"
-                        ></span></p>
-                        <input type="password" id="password" />
-                        <p>确认密码</p>
-                        <input type="password" id="confirmpassword" placeholder="与密码必须一致" />
-                        <p><input type="checkbox" class="checkbox" />邀请码</p>
-                        <input type="submit" class="submit" value="马上注册" />
-                        <p><input type="checkbox" class="checkbox" checked />我已阅读并同意《寺库网用户注册协议》</p>
-                        <p>已经是寺库会员？<a href="login.html" id="btnReg">立即登录</a></p>
+                    <div class="saoma fl">扫码登录</div>
+                    <div class="zhanghao fr">账号登录</div>
+                    <div class="inputs">
+                        <input id="username" type="text" placeholder="&nbsp;&nbsp;账号|邮箱|用户名"/>
+                        <input id="password" type="password" placeholder="&nbsp;&nbsp;密码" /><br />
+                        <input type="checkbox" />记住账号<br /> 
+                        <input type="submit" class="submit" value="立刻登录" />
+                    </div>
+                    <div class="register_b fl" style="margin: 44px 0 0 34px; font-size:14px; ">
+                        <a href="">使用合作网站登录</a>
+                        <a href=""><img src="../img/registerlink.png" alt="" /></a>
+                        <p>还不是会员？<a href="register.html">点击注册</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,6 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="../js/require.js" data-main="../js/register.js" async></script>
-    
+    <script type="text/javascript" src="../js/require.js" data-main="../js/login.js"></script>
 </body>
 </html>
