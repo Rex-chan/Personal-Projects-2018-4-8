@@ -61,6 +61,7 @@ require(['jquery','common'],function(){
                     success:function(data){
                         console.log(data)
                         if(data == 'success'){
+                            alert('注册成功，请登录')
                             location.href = '../html/login.html'
 
                         }

@@ -7,7 +7,7 @@
 			width:800,
 			height:320,
 			index:0,
-			duration:3000,
+			duration:1000,
 			autoPlay:true,
 			type:'vertical',//horizontal,fade
 			seamless:false,
@@ -79,23 +79,35 @@
 				}).on('mouseleave',()=>{
 					move();
 				})
-				$page = $('<div></div>')
-				console.log($page)
-				$page.addClass('active')
-				for(let i=0;i<opt.len;i++){
-					$span = $('<span></span>')
-					$span.appendTo($page)
-					if(i === 0){
-						$span.addClass('active')
-					}
+				$page = $('<div></div>').addClass('page').appendTo($self);				
+				for(let i=1;i<opt.len;i++){
+					(function(i){
+						$span = $('<span></span>')
+						if(i === 1){
+							$span.addClass('active')
+						}
+						$span.appendTo($page)
+					})(i)
+					
 				}
-				$page.addClass('.page').appendTo($self);
-				// 点击页码
-				// .on('click','.page span',function(){
+				// for(let i=0;i<opt.len;i++){
+    //        			(function(i){
+    //             		$self.get(0).onclick =function(){
+    //                 		console.log(i);
+    //             		}
+    //        			})(i);
+    //     		}
+	        	for(var i=1;i<opt.len;i++){
+	          		$self.get(0).onclick = (function(i){
+	                	return function(){
+	                    	console.log(i)
+	                	}
+	            	})(i);
+	        	}
+				//点击页码
+				
 
-				// });
-
-				// move();
+				move();
 			}
 
 			// 运动

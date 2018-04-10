@@ -1,3 +1,17 @@
 #s_banner{
-    .container{height: 620px;margin-top:20px;margin-bottom:20px;}
+    .container{height: 620px;margin-top:20px;}
+}
+#s_main{
+        a:nth-child(odd){margin-right:20px;}        
+        a:hover p{color:#fc0;}
+        a:hover img{transform:scale(1.1,1.1);transition:all 0.5s;}
+        a:hover div{border-bottom:5px solid #fc0;}
+        a{display:block;width: 590px;height: 450px;float: left;
+            div{width: 590px;height: 330px;overflow:hidden;transition:all 0.5s;
+                img{width: 590px;height: 330px;}
+                }
+            p{display:block;width: 590px;height: 70px;font-size: 30px;line-height: 60px;color:#000;transition:all 0.5s;}
+        }    
+    }
+    .main_b{height: 590px;background:skyblue;}
 }

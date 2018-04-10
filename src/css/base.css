@@ -93,6 +93,11 @@ s, i, em {
   text-decoration: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /*公共类*/
 .container {
   /*版心 提取 */

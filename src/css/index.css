@@ -1,5 +1,59 @@
 #s_banner .container {
   height: 620px;
   margin-top: 20px;
-  margin-bottom: 20px;
+}
+
+#s_main .main_t {
+  height: 1345px;
+}
+
+#s_main .main_t a:nth-child(odd) {
+  margin-right: 20px;
+}
+
+#s_main .main_t a:hover p {
+  color: #fc0;
+}
+
+#s_main .main_t a:hover img {
+  transform: scale(1.1, 1.1);
+  transition: all 0.5s;
+}
+
+#s_main .main_t a:hover div {
+  border-bottom: 5px solid #fc0;
+}
+
+#s_main .main_t a {
+  display: block;
+  width: 590px;
+  height: 450px;
+  float: left;
+}
+
+#s_main .main_t a div {
+  width: 590px;
+  height: 330px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+#s_main .main_t a div img {
+  width: 590px;
+  height: 330px;
+}
+
+#s_main .main_t a p {
+  display: block;
+  width: 590px;
+  height: 70px;
+  font-size: 30px;
+  line-height: 60px;
+  color: #000;
+  transition: all 0.5s;
+}
+
+#s_main .main_b {
+  height: 590px;
+  background: skyblue;
 }
