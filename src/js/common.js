@@ -509,5 +509,29 @@ function type(data){
 // 		return 'rgb(' + r + ',' + g + ',' + b + ')';//rgb(225,225,88)
 // 	}
 // }
+	// let bag = document.getElementById('bag');
+	// let bagshow = document.getElementById('bagshow');
+	// let car = document.getElementById('car');
+	// let carshow = document.getElementById('carshow');
+	// function bdisplay(show){
 
+	// 		bagshow.style.display = show;
+	// 	}
+	// bag.onmouseenter = function(){
+	// 	if(bag.style.display === 'none'){
+	// 		bdisplay('block');				
+	// 	}else{
+	// 		bdisplay('none');
+	// 	}
+	// }
+	// function cdisplay(show){
 
+	// 		carshow.style.display = show;
+	// 	}
+	// car.onmouseover = function(){
+	// 	if(carshow.style.display === 'none'){
+	// 		cdisplay('block');				
+	// 	}else{
+	// 		cdisplay('none');
+	// 	}
+	// }

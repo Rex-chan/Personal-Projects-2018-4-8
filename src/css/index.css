@@ -1,3 +1,7 @@
+#s_banner {
+  z-index: -1;
+}
+
 #s_banner .container {
   height: 620px;
   margin-top: 20px;
