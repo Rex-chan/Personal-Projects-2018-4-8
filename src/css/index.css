@@ -7,43 +7,43 @@
   margin-top: 20px;
 }
 
-#s_main a:nth-child(odd) {
+#s_main .main_t a:nth-child(odd) {
   margin-right: 20px;
 }
 
-#s_main a:hover p {
+#s_main .main_t a:hover p {
   color: #fc0;
 }
 
-#s_main a:hover img {
+#s_main .main_t a:hover img {
   transform: scale(1.1, 1.1);
   transition: all 0.5s;
 }
 
-#s_main a:hover div {
+#s_main .main_t a:hover div {
   border-bottom: 5px solid #fc0;
 }
 
-#s_main a {
+#s_main .main_t a {
   display: block;
   width: 590px;
   height: 450px;
   float: left;
 }
 
-#s_main a div {
+#s_main .main_t a div {
   width: 590px;
   height: 330px;
   overflow: hidden;
   transition: all 0.5s;
 }
 
-#s_main a div img {
+#s_main .main_t a div img {
   width: 590px;
   height: 330px;
 }
 
-#s_main a p {
+#s_main .main_t a p {
   display: block;
   width: 590px;
   height: 70px;
@@ -54,10 +54,11 @@
 }
 
 #s_main .main_b {
-  height: 590px;
+  height: 406px;
   margin-top: 82px;
   border-top: 3px solid #fc0;
   position: relative;
+  padding-top: 103px;
 }
 
 #s_main .main_b .title {
@@ -68,4 +69,66 @@
   font-size: 30px;
   display: block;
   background: #fff;
+}
+
+#s_main .main_b .left {
+  font-size: 50px;
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  margin-top: -90px;
+}
+
+#s_main .main_b .right {
+  font-size: 50px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  margin-top: -90px;
+}
+
+#s_main .main_b #main_focus {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#s_main .main_b #main_focus ul {
+  width: 6500px;
+  position: absolute;
+}
+
+#s_main .main_b #main_focus ul a:hover .descirbe {
+  color: #fc0;
+}
+
+#s_main .main_b #main_focus ul a:hover .detail {
+  color: #fc0;
+}
+
+#s_main .main_b #main_focus ul a {
+  float: left;
+  margin-right: 105px;
+  width: 220px;
+}
+
+#s_main .main_b #main_focus ul a li .phtot {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+}
+
+#s_main .main_b #main_focus ul a li .descirbe {
+  font-size: 20px;
+  line-height: 28px;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#s_main .main_b #main_focus ul a li .detail {
+  font-size: 16px;
+  color: #000;
 }

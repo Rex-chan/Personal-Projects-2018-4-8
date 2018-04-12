@@ -3,6 +3,7 @@
     .container{height: 620px;margin-top:20px;}
 }
 #s_main{
+    .main_t{
         a:nth-child(odd){margin-right:20px;}        
         a:hover p{color:#fc0;}
         a:hover img{transform:scale(1.1,1.1);transition:all 0.5s;}
@@ -12,10 +13,29 @@
                 img{width: 590px;height: 330px;}
                 }
             p{display:block;width: 590px;height: 70px;font-size: 30px;line-height: 60px;color:#000;transition:all 0.5s;}
-        }    
+        }  
+    }
+          
     
-    .main_b{height: 590px;margin-top:82px;border-top:3px solid #fc0;position:relative;
+    .main_b{height: 406px;margin-top:82px;border-top:3px solid #fc0;position:relative;padding-top:103px;
         .title{position:absolute;left:50%;margin-left:-60px;top:-22px;font-size: 30px;display:block;background:#fff;}
+        .left{font-size: 50px;position:absolute;left:-25px;top:50%;margin-top:-90px;}
+        .right{font-size: 50px;position:absolute;right:-25px;top:50%;margin-top:-90px;}
+
+        #main_focus{position:relative;width: 1200px;height: 300px;overflow:hidden;
+            ul{width: 6500px;position:absolute;
+                a:hover .descirbe{color:#fc0;}
+                a:hover .detail{color:#fc0;}
+                
+                a{float:left;margin-right: 105px;width: 220px;
+                   li{
+                    .phtot{width: 220px;height: 220px;overflow:hidden;}
+                    .descirbe{font-size: 20px;line-height: 28px;color:#000;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+                    .detail{font-size: 16px;color:#000;}
+                    } 
+                }
+            }
+        }
         
     }
 }
