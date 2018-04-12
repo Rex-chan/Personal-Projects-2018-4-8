@@ -14,5 +14,8 @@
             p{display:block;width: 590px;height: 70px;font-size: 30px;line-height: 60px;color:#000;transition:all 0.5s;}
         }    
     
-    .main_b{height: 590px;background:skyblue;}
+    .main_b{height: 590px;margin-top:82px;border-top:3px solid #fc0;position:relative;
+        .title{position:absolute;left:50%;margin-left:-60px;top:-22px;font-size: 30px;display:block;background:#fff;}
+        
+    }
 }

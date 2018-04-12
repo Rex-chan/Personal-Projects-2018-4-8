@@ -11,7 +11,7 @@ require.config({
 });
 require(['jquery','common'],function(){
 	require(['jquery'],function($){
-	   let $username = $('#username');
+	    let $username = $('#username');
         let $password = $('#password');
         let $btnReg = $('.submit');
         let $usernametext = $('.usernametext')
@@ -20,7 +20,7 @@ require(['jquery','common'],function(){
         $username.blur(function(){
             let _username = $username.val().trim();
             if(!/^[a-z][\w\-]{5,19}$/i.test(_username)){
-            $usernametext.text( "用户名不合法")
+            $usernametext.text( "用户名不合规范")
             .css({"color": "red"});
             return false;
             }
@@ -30,12 +30,14 @@ require(['jquery','common'],function(){
                     success:function(data){
                         if(data === 'success'){
                             $usernametext.text("用户名可以使用！").css({
-                                "color": "green"
-                            });                           
+                                "color": "green",
+                                "font-weight": "700"
+                            });         
                         }else{
                             $usernametext.text( "这个用户名太受欢迎了").css({
-                                "color": "red"
-                            });
+                                "color": "red",
+                                "font-weight": "700"
+                            });         
                         }
                     }
                 })

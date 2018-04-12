@@ -55,5 +55,17 @@
 
 #s_main .main_b {
   height: 590px;
-  background: skyblue;
+  margin-top: 82px;
+  border-top: 3px solid #fc0;
+  position: relative;
+}
+
+#s_main .main_b .title {
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  top: -22px;
+  font-size: 30px;
+  display: block;
+  background: #fff;
 }
