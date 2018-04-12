@@ -81,13 +81,13 @@
 				})
 				$page = $('<div></div>').addClass('page').appendTo($self);				
 				for(let i=1;i<opt.len;i++){
-					(function(i){
+					
 						$span = $('<span></span>')
 						if(i === 1){
 							$span.addClass('active')
 						}
 						$span.appendTo($page)
-					})(i)
+					
 					
 				}
 				// for(let i=0;i<opt.len;i++){
