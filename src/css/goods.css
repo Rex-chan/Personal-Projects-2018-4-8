@@ -66,8 +66,6 @@
 
 #goods_main .container .main_head {
   height: 85px;
-  padding-top: 2px;
-  margin-top: -2px;
 }
 
 #goods_main .container .main_head a {
@@ -83,6 +81,8 @@
 #goods_main .container .main_head a:hover {
   border-top: 2px solid #e93b39;
   color: #e03b39;
+  padding-top: 2px;
+  margin-top: -2px;
 }
 
 #goods_main .container .main_head .product_control {
