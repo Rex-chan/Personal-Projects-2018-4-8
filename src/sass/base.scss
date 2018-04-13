@@ -157,8 +157,7 @@ $color:#000000;
 #s_nav{
 	background:$mainColor;
 	height: 44px;
-    .container{position:relative;}
-    li:hover .bagshow{display:block;}
+    .container{position:relative;}   
     li{float: left;
         .show{position:absolute;left:0; top:64px;z-index: 10;width: 1200px;background:#fff;border-bottom:3px solid #fc0;opacity:0.95;border-top:3px solid #fc0;
             .title{

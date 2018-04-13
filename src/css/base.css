@@ -259,10 +259,6 @@ s, i, em {
   position: relative;
 }
 
-#s_nav li:hover .bagshow {
-  display: block;
-}
-
 #s_nav li {
   float: left;
 }

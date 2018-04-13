@@ -1,0 +1,64 @@
+#goods_multiple {
+  background: #EDEDED;
+}
+
+#goods_multiple .container .multiple_t {
+  width: 100%;
+  height: 52px;
+  padding-top: 10px;
+}
+
+#goods_multiple .container .multiple_t p {
+  font-size: 14px;
+  line-height: 52px;
+}
+
+#goods_multiple .container .multiple_b div {
+  border-bottom: 1px dashed #EDEDED;
+}
+
+#goods_multiple .container .multiple_b .left {
+  width: 110px;
+  font-size: 12px;
+  color: #666666;
+}
+
+#goods_multiple .container .multiple_b .right {
+  height: 100%;
+  width: 960px;
+  padding-right: 130px;
+  background: #fff;
+}
+
+#goods_multiple .container .multiple_b .right a {
+  margin: 12px 0 0;
+  height: 22px;
+  padding: 0 22px 0 10px;
+  white-space: nowrap;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  font-size: 12px;
+  color: #666666;
+}
+
+#goods_multiple .container .multiple_b .multiple_brand {
+  height: 233px;
+}
+
+#goods_multiple .container .multiple_b .multiple_classify {
+  height: 80px;
+}
+
+#goods_multiple .container .multiple_b .multiple_price {
+  height: 47px;
+}
+
+#goods_multiple .container .multiple_b .multiple_user {
+  height: 47px;
+}
+
+#goods_main .container .main_head {
+  height: 85px;
+}

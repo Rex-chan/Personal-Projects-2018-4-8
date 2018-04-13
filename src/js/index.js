@@ -56,7 +56,7 @@ require(['config'],function(){
             
         });
         $ul.on('mouseleave','li',function(){
-            $(this).find('.show').slideToggle();
+            $(this).find('.show').slideToggle(200);
         });
         // $('.accordion').on('mouseover','h4',function(){
         //     $(this).find('.content').slideToggle()
