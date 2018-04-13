@@ -267,7 +267,7 @@ s, i, em {
   float: left;
 }
 
-#s_nav li .bagshow {
+#s_nav li .show {
   position: absolute;
   left: 0;
   top: 64px;
@@ -276,25 +276,26 @@ s, i, em {
   background: #fff;
   border-bottom: 3px solid #fc0;
   opacity: 0.95;
+  border-top: 3px solid #fc0;
 }
 
-#s_nav li .bagshow .title span {
+#s_nav li .show .title span {
   font-weight: 550;
   font-size: 16px;
   line-height: 40px;
   padding-top: 10px;
 }
 
-#s_nav li .bagshow .title span:nth-child(2) {
+#s_nav li .show .title span:nth-child(2) {
   margin: 0 400px;
 }
 
-#s_nav li .bagshow .content {
+#s_nav li .show .content {
   width: 100%;
   height: 188px;
 }
 
-#s_nav li .bagshow .content a {
+#s_nav li .show .content a {
   font-size: 14px;
   color: #656158;
   line-height: 24px;

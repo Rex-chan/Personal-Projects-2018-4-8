@@ -3,8 +3,9 @@ require(['config'],function(){
         $('#banner_focus').xCarousel({
                 width:1200,height:500,                
                 type:'fade',
+                duration:1500,
                 imgs:['img/banner1.jpg','img/banner2.jpg','img/banner3.jpg','img/banner4.jpg','img/banner5.jpg','img/banner6.jpg',]
-        });
+        }); 
         ajax({
             url:'api/getdata.php',
             success:function(data){
@@ -31,12 +32,6 @@ require(['config'],function(){
                     let $ul = $main_focus.children('ul');
                     let $goods = $main_focus.find('a')  
                     console.log($goods)
-                    // $goods.on(mouseover(()=>{
-                    //     $turn.show(300).css({color:'#fc0'});
-                    // });
-                    // $ul.mouseout(function(){
-                    //     $turn.stop().hide(1000);
-                    // })
                     let i1 = 0;
                     let i2 = 0;
                     $main_focus.on('mouseenter',$turn,function(){
@@ -44,58 +39,30 @@ require(['config'],function(){
                     }).on('mouseleave',$turn,function(){
                         $turn.hide(1000)
                     })
-                    // $left.click(function(){
-                    //      i1++;
-                    //     $ul.animate({left: i1*-960+'px'}, "slow");
-                    // })
-                    // $right.click(function() {
-                    //     i2++;
-                        
-                    //     $ul.animate({left: i2*960+'px'}, "slow");
-                    // });
-                    let len = $goods.length/4;
-                    console.log(len)
-                    let index = 0;
-                    let $page = $('<div></div>').addClass('page').appendTo($main_focus);
-                    for(let i=1; i<len;i++){
-                        let $span= $('<p></p>')
-                        if(i===1){
-                            $span.addClass('active')
-                        }
-                        $span.appendTo($page);
-                    }
-                    let imgWidth = $goods.outerWidth(true)*4+'px';
-                    console.log(imgWidth);
-                    $main_focus.on('mouseenter',()=>{
-                        clearInterval($main_focus.timer);
-                    }).on('mouseleave',()=>{
-                        move();
+                    $left.click(function(){
+                         i1++;
+                        $ul.animate({left: i1*-960+'px'}, "slow");
                     });
-                    let move=()=>{
-                        $main_focus.timer =setInterval(function(){
-                            index++;
-                            show();
-                        })
-                    };
-                    let show = function(){
-                        if(index >= len){
-                            $ul.get(0).style.left = 0;
-                            index = 1;
-                        }
-                        // animate(ul,{left:-imgWidth*index});
-                        $ul.animate({left:-imgWidth*index});
-                        for(let i=0;i<len-1;i++){//0,1,2,3
-                            page.children[i].className = '';
-                        }
-                            if(index === len - 1){
-                            page.children[0].className = 'active';
-                        }else{
-                            page.children[index].className = 'active'
-                        }
-                    }
+                    $right.click(function(){
+                         i2++;
+                        $ul.animate({left: i1*960+'px'}, "slow");
+                    })
             }
         })
+        let $ul = $('#s_nav').find('ul');
+        console.log($ul);
+        $ul.on('mouseover','li',function(){
+            $(this).find('.show').show();
             
+        });
+        $ul.on('mouseleave','li',function(){
+            $(this).find('.show').slideToggle();
+        });
+        // $('.accordion').on('mouseover','h4',function(){
+        //     $(this).find('.content').slideToggle()
+        //     .siblings.find('.content').slideUp();
+
+        // })
         
         
         

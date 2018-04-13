@@ -1,13 +1,15 @@
 ;(function($){
+	'use strict'
 	$.fn.xCarousel = function(options){
 		// this指向$(.box元素)
 		// console.log(this)
 
 		let defaults = {
+			imgs:[],
 			width:800,
-			height:320,
+			height:700,
 			index:0,
-			duration:1000,
+			duration:3000,
 			autoPlay:true,
 			type:'vertical',//horizontal,fade
 			seamless:false,
@@ -17,17 +19,24 @@
 
 		return this.each(function(){
 			// 这里的this指向
-			console.log(this);
+			
 
 			let $self = $(this);
 
+			
 			// let opt = Object.assign({},defaults,options);
 			let opt = $.extend(true,{},defaults,options);//深复制
 
-			opt.len = opt.imgs.length;
 
+
+			opt.len = opt.imgs.length;
+			if(opt.seamless){
+				opt.len++;
+				opt.imgs.push(opt.imgs[0]);
+			}
 
 			let $ul;
+			let $page;
 
 			// 上一张图处索引值
 			let lastIndex = opt.index;
@@ -47,7 +56,10 @@
 				let $res = $.map(opt.imgs,function(url){
 					let $li = $('<li/>');
 					let $img = $('<img/>');
-					$img.attr('src',url).appendTo($li);
+					$img.attr('src',url).css({
+						width:opt.width,
+						height:opt.height
+					}).appendTo($li);
 
 					return $li;
 				});//[$li,$li,$li]
@@ -55,6 +67,25 @@
 				$ul.append($res);
 
 				$ul.appendTo($self);
+
+				//添加分页
+				if(opt.page){
+					$page = $('<div/>');
+					$page.addClass('page');
+					if(opt.seamless){
+						opt.imgs = opt.imgs.slice(0,-1);
+					}
+					$.each(opt.imgs,function(idx,img){
+						let $span = $('<span/>');
+						$span.text((idx+1)).appendTo($page);
+						if(opt.index==idx){
+							$span.addClass('active')
+						}
+					})
+
+					$page.appendTo($self);
+				}
+				
 
 				// 水平滚动必须设置ul的宽度
 				if(opt.type === 'horizontal'){
@@ -79,33 +110,24 @@
 				}).on('mouseleave',()=>{
 					move();
 				})
-				$page = $('<div></div>').addClass('page').appendTo($self);				
-				for(let i=1;i<opt.len;i++){
+
+				// 点击页码
+				.on('click','.page span',function(){
 					
-						$span = $('<span></span>')
-						if(i === 1){
-							$span.addClass('active')
+					$self.find(':animated').stop(true)
+
+					if(opt.type == 'fade'){
+						if(opt.index ==$(this).text()-1){
+							return false;
 						}
-						$span.appendTo($page)
+					}
+
+					opt.index = $(this).text()-1;
 					
-					
-				}
-				// for(let i=0;i<opt.len;i++){
-    //        			(function(i){
-    //             		$self.get(0).onclick =function(){
-    //                 		console.log(i);
-    //             		}
-    //        			})(i);
-    //     		}
-	        	for(var i=1;i<opt.len;i++){
-	          		$self.get(0).onclick = (function(i){
-	                	return function(){
-	                    	console.log(i)
-	                	}
-	            	})(i);
-	        	}
-				//点击页码
-				
+					show();
+					pageMove();
+
+				});
 
 				move();
 			}
@@ -118,11 +140,34 @@
 					show();
 				},opt.duration);
 			};
+			//页码
+			let pageMove = ()=>{
+				if(opt.seamless && opt.index==opt.len-1){
+					$page.children().filter('.active').removeClass('active');
+					$page.children().eq(0).addClass('active');
+				}else{
+					$page.children().filter('.active').removeClass('active');
+					$page.children().eq(opt.index).addClass('active');
+				}
+				
+			}
 
 
 			let show = function(){
 				if(opt.index >= opt.len){
-					opt.index = 0;
+					
+
+					if(opt.seamless){
+						if(opt.type == 'horizontal'){
+							$ul.css({left:0});
+						}else if(opt.type == 'vertical'){
+							$ul.css({top:0});
+						}
+						
+						opt.index = 1;
+					}else{
+						opt.index = 0;
+					}
 				}else if(opt.index < 0){
 					opt.index = opt.len-1
 				}
@@ -130,10 +175,20 @@
 				let obj = {};
 				if(opt.type === 'vertical'){
 					obj.top = -opt.height*opt.index;
-					$ul.animate(obj)
+					$ul.animate(obj);
+
+
+					if(opt.page){
+						pageMove();
+					}
 				}else if(opt.type === 'horizontal'){
 					obj.left = -opt.width*opt.index;
-					$ul.animate(obj)
+					$ul.animate(obj);
+
+					if(opt.page){
+						pageMove();
+					}
+					
 				}else if(opt.type === 'fade'){
 					// 改变li的opacity
 					$ul.children('li').eq(opt.index).animate({opacity:1},function(){
@@ -142,6 +197,10 @@
 					$ul.children('li').eq(lastIndex).animate({opacity:0},function(){
 						lastIndex = opt.index;
 					});
+
+					if(opt.page){
+						pageMove();
+					}
 
 				}
 				
