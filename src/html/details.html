@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <title>details</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
-
+    <link rel="stylesheet" type="text/css" href="../css/details.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/jquery-xZoom/jquery.xZoom.css.css" />
 </head>
 <body>
     <div id="secoo">
@@ -28,23 +29,521 @@
                 </div>
             </div>
         </header>
-        <nav id="s_nav">
-            <div class="container">
-                <ul>
-                    <li><a href="">首页</a></li>
-                    <li><a href="">包袋</a></li>
-                    <li><a href="">腕表</a></li>
-                    <li><a href="">珠宝首饰</a></li>
-                    <li><a href="">服装靴鞋</a></li>
-                    <li><a href="">配饰</a></li>
-                    <li><a href="">家居生活</a></li>
-                    <li><a href="">母婴美妆</a></li>
-                    <li><a href="">生活方式</a></li>
-                    <li><a href="">豪车频道</a></li>
+        <nav id="s_nav" class="clearfix">
+            <div class="container clearfix">
+                <ul class="clearfix fl">
+                    <li >
+                        <a href="">首页</a>
+                        
+                    </li>
+                    <li >
+                        <a href="" id="bag">包袋</a>
+                        <div class="bagshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">圣罗兰</a>
+                                    <a href="#">宝格丽</a>
+                                    <a href="#">蔻驰</a>
+                                    <a href="#">巴利</a>
+                                    <a href="#">葆蝶家</a>
+                                    <a href="#">巴利</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">范思哲</a>
+                                    <a href="#">杜嘉班纳</a>
+                                    <a href="#">克洛伊</a>
+                                    <a href="#">缪缪</a>
+                                    <a href="#">瑞贝卡.明可</a>
+                                    <a href="#">弗安蒂佩玛</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">杀手包</a>
+                                    <a href="#">贝壳包</a>
+                                    <a href="#">饺子包</a>
+                                    <a href="#">链条包</a>
+                                    <a href="#">铆钉包</a>
+                                    <a href="#">托特包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">GUCCI酒神</a>
+                                    <a href="#">Burberry格纹</a>
+                                    <a href="#">LV老花</a>
+                                    <a href="#">小怪兽</a>
+                                    <a href="#">mcm双肩包</a>
+                                    <a href="#">GUCCI酒神</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
+                    <li id="car">
+                        <a href="">腕表</a>
+                        <div class="carshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">汽车美容</a>
+                                    <a href="#">汽车坐垫</a>
+                                    <a href="#">汽车保养</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">汽车模型</a>
+                                    <a href="#">游艇汽车</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">宝马</a>
+                                    <a href="#">摩根</a>
+                                    <a href="#">现代</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">安全自
+                                        驾</a>
+                                    <a href="#">马自达</a>
+                                    <a href="#">奔驰</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">行车记录</a>
+                                    <a href="#">仪车载净</a>
+                                    <a href="#">化器车载</a>
+                                    <a href="#">香水</a>
+                                    <a href="#">自驾野营</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">应急救援</a>
+                                    <a href="#">美容清洁</a>
+                                    <a href="#">精品轮毂</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>          
+                            </div>
+                        </div>              
+                    </li>
+                    <li >
+                        <a href="">珠宝首饰</a>
+                        <div class="bagshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">圣罗兰</a>
+                                    <a href="#">宝格丽</a>
+                                    <a href="#">蔻驰</a>
+                                    <a href="#">巴利</a>
+                                    <a href="#">葆蝶家</a>
+                                    <a href="#">巴利</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">范思哲</a>
+                                    <a href="#">杜嘉班纳</a>
+                                    <a href="#">克洛伊</a>
+                                    <a href="#">缪缪</a>
+                                    <a href="#">瑞贝卡.明可</a>
+                                    <a href="#">弗安蒂佩玛</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">杀手包</a>
+                                    <a href="#">贝壳包</a>
+                                    <a href="#">饺子包</a>
+                                    <a href="#">链条包</a>
+                                    <a href="#">铆钉包</a>
+                                    <a href="#">托特包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">GUCCI酒神</a>
+                                    <a href="#">Burberry格纹</a>
+                                    <a href="#">LV老花</a>
+                                    <a href="#">小怪兽</a>
+                                    <a href="#">mcm双肩包</a>
+                                    <a href="#">GUCCI酒神</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <a href="">服装靴鞋</a>
+                        <div class="carshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">汽车美容</a>
+                                    <a href="#">汽车坐垫</a>
+                                    <a href="#">汽车保养</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">汽车模型</a>
+                                    <a href="#">游艇汽车</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">宝马</a>
+                                    <a href="#">摩根</a>
+                                    <a href="#">现代</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">安全自
+                                        驾</a>
+                                    <a href="#">马自达</a>
+                                    <a href="#">奔驰</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">行车记录</a>
+                                    <a href="#">仪车载净</a>
+                                    <a href="#">化器车载</a>
+                                    <a href="#">香水</a>
+                                    <a href="#">自驾野营</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">应急救援</a>
+                                    <a href="#">美容清洁</a>
+                                    <a href="#">精品轮毂</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <a href="">配饰</a>
+                        <div class="bagshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">圣罗兰</a>
+                                    <a href="#">宝格丽</a>
+                                    <a href="#">蔻驰</a>
+                                    <a href="#">巴利</a>
+                                    <a href="#">葆蝶家</a>
+                                    <a href="#">巴利</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">范思哲</a>
+                                    <a href="#">杜嘉班纳</a>
+                                    <a href="#">克洛伊</a>
+                                    <a href="#">缪缪</a>
+                                    <a href="#">瑞贝卡.明可</a>
+                                    <a href="#">弗安蒂佩玛</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">杀手包</a>
+                                    <a href="#">贝壳包</a>
+                                    <a href="#">饺子包</a>
+                                    <a href="#">链条包</a>
+                                    <a href="#">铆钉包</a>
+                                    <a href="#">托特包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">GUCCI酒神</a>
+                                    <a href="#">Burberry格纹</a>
+                                    <a href="#">LV老花</a>
+                                    <a href="#">小怪兽</a>
+                                    <a href="#">mcm双肩包</a>
+                                    <a href="#">GUCCI酒神</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <a href="">家居生活</a>
+                        <div class="carshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">汽车美容</a>
+                                    <a href="#">汽车坐垫</a>
+                                    <a href="#">汽车保养</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">汽车模型</a>
+                                    <a href="#">游艇汽车</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">宝马</a>
+                                    <a href="#">摩根</a>
+                                    <a href="#">现代</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">安全自
+                                        驾</a>
+                                    <a href="#">马自达</a>
+                                    <a href="#">奔驰</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">行车记录</a>
+                                    <a href="#">仪车载净</a>
+                                    <a href="#">化器车载</a>
+                                    <a href="#">香水</a>
+                                    <a href="#">自驾野营</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">应急救援</a>
+                                    <a href="#">美容清洁</a>
+                                    <a href="#">精品轮毂</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <a href="">母婴美妆</a>
+                        <div class="bagshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">圣罗兰</a>
+                                    <a href="#">宝格丽</a>
+                                    <a href="#">蔻驰</a>
+                                    <a href="#">巴利</a>
+                                    <a href="#">葆蝶家</a>
+                                    <a href="#">巴利</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">范思哲</a>
+                                    <a href="#">杜嘉班纳</a>
+                                    <a href="#">克洛伊</a>
+                                    <a href="#">缪缪</a>
+                                    <a href="#">瑞贝卡.明可</a>
+                                    <a href="#">弗安蒂佩玛</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">杀手包</a>
+                                    <a href="#">贝壳包</a>
+                                    <a href="#">饺子包</a>
+                                    <a href="#">链条包</a>
+                                    <a href="#">铆钉包</a>
+                                    <a href="#">托特包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">GUCCI酒神</a>
+                                    <a href="#">Burberry格纹</a>
+                                    <a href="#">LV老花</a>
+                                    <a href="#">小怪兽</a>
+                                    <a href="#">mcm双肩包</a>
+                                    <a href="#">GUCCI酒神</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <a href="">生活方式</a>
+                        <div class="carshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">汽车美容</a>
+                                    <a href="#">汽车坐垫</a>
+                                    <a href="#">汽车保养</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">汽车模型</a>
+                                    <a href="#">游艇汽车</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">宝马</a>
+                                    <a href="#">摩根</a>
+                                    <a href="#">现代</a>
+                                    <a href="#">汽车喷漆</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">安全自
+                                        驾</a>
+                                    <a href="#">马自达</a>
+                                    <a href="#">奔驰</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">行车记录</a>
+                                    <a href="#">仪车载净</a>
+                                    <a href="#">化器车载</a>
+                                    <a href="#">香水</a>
+                                    <a href="#">自驾野营</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">安全自驾</a>
+                                    <a href="#">应急救援</a>
+                                    <a href="#">美容清洁</a>
+                                    <a href="#">精品轮毂</a>
+                                    <a href="#">汽车漂移</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <a href="">豪车频道</a>
+                        <div class="bagshow show" style="display:none">
+                            <div class="title">
+                                <span>分类</span>
+                                <span>品牌</span>
+                                <span>热词</span>
+                            </div>
+                            <div class="content">
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">男士包袋</a>
+                                    <a href="#">女士包袋</a>
+                                    <a href="#">钱包</a>
+                                    <a href="#">手拿包</a>
+                                </div>
+                                <div class="fl" style="margin-left:243px;">
+                                    <a href="#">圣罗兰</a>
+                                    <a href="#">宝格丽</a>
+                                    <a href="#">蔻驰</a>
+                                    <a href="#">巴利</a>
+                                    <a href="#">葆蝶家</a>
+                                    <a href="#">巴利</a>
+                                </div>
+                                <div class="fl"style="margin-right:238px;">
+                                    <a href="#">范思哲</a>
+                                    <a href="#">杜嘉班纳</a>
+                                    <a href="#">克洛伊</a>
+                                    <a href="#">缪缪</a>
+                                    <a href="#">瑞贝卡.明可</a>
+                                    <a href="#">弗安蒂佩玛</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">杀手包</a>
+                                    <a href="#">贝壳包</a>
+                                    <a href="#">饺子包</a>
+                                    <a href="#">链条包</a>
+                                    <a href="#">铆钉包</a>
+                                    <a href="#">托特包</a>
+                                </div>
+                                <div class="fl">
+                                    <a href="#">GUCCI酒神</a>
+                                    <a href="#">Burberry格纹</a>
+                                    <a href="#">LV老花</a>
+                                    <a href="#">小怪兽</a>
+                                    <a href="#">mcm双肩包</a>
+                                    <a href="#">GUCCI酒神</a>
+                                </div>          
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <div class="searchinput fr"><input type="text"placeholder="Roger VIvier" /><i class="icon-huo iconfont find"></i></div>
             </div>
         </nav>
+        <main id="details_main">
+            <div class="container">
+                <img src="../img/details.png" height="65" width="1200" alt="" />
+                <div class="main_c clearfix">
+                    <div class="main_c_l fl">
+                        <div class="goods">
+                            <img src="../img/b1.jpg" data-big="../img/b1.jpg" height="400" width="400"class="fr"  >
+                        </div>
+                        <div class="smallList fl">
+                            <img src="../img/b1.jpg" alt="">
+                            <img src="../img/b2.jpg" alt="">
+                            <img src="../img/b3.jpg" alt="">
+                            <img src="../img/b4.jpg" alt="">
+                            <img src="../img/b5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_c_r fr"></div>
+                </div>
+            </div>            
+        </main>
         <footer id="s_footer">
             <div class="container">
                 <div class="footer_t">
@@ -86,5 +585,7 @@
             </div>
         </footer>
     </div>
+    <!-- <script type="text/javascript" src="../js/require.js" data-main="../js/details.js"> </script> -->
+    <script type="text/javascript" src="../js/require.js" data-main="../js/details.js"></script>
 </body>
 </html>

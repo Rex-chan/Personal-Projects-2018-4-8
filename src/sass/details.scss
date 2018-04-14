@@ -1,0 +1,29 @@
+#details_main{
+    background:#EDEDED;
+    .container{
+        .main_c{
+            height: 540px;background:#fff;
+            .main_c_l{
+                width:520px;height: 100%;padding-top:40px;
+                .smallList{width: 80px;padding-left:40px;
+                    img{width:80px;}
+                }
+                .gds-bigzoom img{min-width: 1000px;}
+            }
+            .main_c_r{
+                padding-left:50px;
+                width: 629px;height: 100%;
+
+                .descirbe{height: 107px;padding-top:30px;
+                    p{width: 435px;font-size: 18px; line-height: 28px;text-align:left;color:#666666;}
+                }
+                .price{
+                    span{font-size: 26px;color:red;padding-left:30px;}
+                }
+                div{
+                    font-size: 18px;line-height: 28px;padding-top:10px;
+                }
+            }
+        }
+    }
+}

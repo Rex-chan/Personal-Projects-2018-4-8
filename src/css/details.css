@@ -1,0 +1,58 @@
+#details_main {
+  background: #EDEDED;
+}
+
+#details_main .container .main_c {
+  height: 540px;
+  background: #fff;
+}
+
+#details_main .container .main_c .main_c_l {
+  width: 520px;
+  height: 100%;
+  padding-top: 40px;
+}
+
+#details_main .container .main_c .main_c_l .smallList {
+  width: 80px;
+  padding-left: 40px;
+}
+
+#details_main .container .main_c .main_c_l .smallList img {
+  width: 80px;
+}
+
+#details_main .container .main_c .main_c_l .gds-bigzoom img {
+  min-width: 1000px;
+}
+
+#details_main .container .main_c .main_c_r {
+  padding-left: 50px;
+  width: 629px;
+  height: 100%;
+}
+
+#details_main .container .main_c .main_c_r .descirbe {
+  height: 107px;
+  padding-top: 30px;
+}
+
+#details_main .container .main_c .main_c_r .descirbe p {
+  width: 435px;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+  color: #666666;
+}
+
+#details_main .container .main_c .main_c_r .price span {
+  font-size: 26px;
+  color: red;
+  padding-left: 30px;
+}
+
+#details_main .container .main_c .main_c_r div {
+  font-size: 18px;
+  line-height: 28px;
+  padding-top: 10px;
+}

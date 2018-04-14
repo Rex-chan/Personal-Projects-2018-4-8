@@ -6,6 +6,7 @@ require(['config'],function(){
                 duration:1500,
                 imgs:['img/banner1.jpg','img/banner2.jpg','img/banner3.jpg','img/banner4.jpg','img/banner5.jpg','img/banner6.jpg',]
         }); 
+        console.log($)
         ajax({
             url:'api/getdata.php',
             success:function(data){
@@ -58,11 +59,7 @@ require(['config'],function(){
         $ul.on('mouseleave','li',function(){
             $(this).find('.show').slideToggle(200);
         });
-        // $('.accordion').on('mouseover','h4',function(){
-        //     $(this).find('.content').slideToggle()
-        //     .siblings.find('.content').slideUp();
-
-        // })
+        
         
         
         
