@@ -9,7 +9,7 @@
 
 #details_main .container .main_c .main_c_l {
   width: 520px;
-  height: 100%;
+  height: 500px;
   padding-top: 40px;
 }
 
@@ -24,6 +24,21 @@
 
 #details_main .container .main_c .main_c_l .gds-bigzoom img {
   min-width: 1000px;
+}
+
+#details_main .container .main_c .main_c_l .serves {
+  padding-left: 40px;
+}
+
+#details_main .container .main_c .main_c_l .serves span {
+  font-size: 14px;
+  margin-right: 15px;
+  color: #666;
+  line-height: 80px;
+}
+
+#details_main .container .main_c .main_c_l .serves i {
+  color: blue;
 }
 
 #details_main .container .main_c .main_c_r {

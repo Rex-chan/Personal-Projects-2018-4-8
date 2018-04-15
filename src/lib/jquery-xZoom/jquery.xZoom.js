@@ -95,8 +95,8 @@
 						// 设置放大镜尺寸
 						// 与放大区域成比例
 						$zoom.css({
-							width:opt.width/ratio,
-							height:opt.height/ratio
+							width:opt.width/2,
+							height:opt.height/2
 						});
 
 					}).on('mouseleave',function(){

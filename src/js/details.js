@@ -29,7 +29,21 @@ require(['config'],function(){
                     </div>`
                 })
                 $details.html(content)
-
+                $goods = $('.goods')
+                $img = $goods.find('img');
+                $smallImg = $goods.next().find('img').eq(0);
+                console.log($smallImg);
+                console.log(goods[0].url)
+                $img.attr({'src':goods[0].url,'data-big':goods[0].url});
+                $smallImg.prop({'src':goods[0].url})
+                // $("#pic").css('src', 'img/f5/project.jpg')
+                $goods.xZoom({
+                    // wihtd:400,
+                    // height:400,
+                    // position:'right'
+                    
+                
+                })
             }
         })
         
