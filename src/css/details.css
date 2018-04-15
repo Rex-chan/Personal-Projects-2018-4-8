@@ -62,12 +62,27 @@
 
 #details_main .container .main_c .main_c_r .price span {
   font-size: 26px;
-  color: red;
+  color: #E93A38;
   padding-left: 30px;
 }
 
-#details_main .container .main_c .main_c_r div {
-  font-size: 18px;
+#details_main .container .main_c .main_c_r .text {
+  font-size: 14px;
   line-height: 28px;
   padding-top: 10px;
+}
+
+#details_main .container .main_c .main_c_r .buy {
+  padding-top: 80px;
+}
+
+#details_main .container .main_c .main_c_r .buy button {
+  width: 120px;
+  height: 50px;
+  margin-right: 50px;
+  border: 3px solid #E93A38;
+  background: #fff;
+  color: #E93A38;
+  line-height: 50px;
+  text-align: center;
 }
