@@ -46,7 +46,42 @@ s,i,em{font-style:normal;text-decoration:none;}
     background:#323131;
     a{line-height: 70px;color:#fff;font-size: 14px;}  
 }
-
+#shoppingcar_mian{
+    background:#F6F6F6;
+    padding:0 100px;
+    .list{width: 990px;
+        .list_head{
+            height: 48px;border:1px solid #fff;
+            span{display:inline-block;font-size: 14px;text-align:center;line-height: 48px;}
+            span:nth-child(1){width: 80px;}
+            span:nth-child(2){width: 365px;}
+            span:nth-child(3){width: 95px;}
+            span:nth-child(4){width: 95px;}
+            span:nth-child(5){width: 138px;}
+            span:nth-child(5){width: 120px;}
+            span:nth-child(6){width: 100px;}
+        }
+        .list_main{line-height: 120px;
+            height: 120px;border:1px solid #fff;background:#FDF0EF;
+            span{display:inline-block;font-size: 14px;text-align:center;}
+            span:nth-child(1){width: 80px;}
+            span:nth-child(2){
+                width: 365px;
+                position:relative;
+                img{position:absolute;top:20px;left:20px}
+            }
+            span:nth-child(3){width: 95px;}
+            span:nth-child(4){width: 95px;}
+            span:nth-child(5){width: 138px;}
+            span:nth-child(5){width: 120px;}
+            span:nth-child(6){width: 100px;}
+        
+        }
+        .list_count{
+            width: 990px;height: 206px;background:skyblue;
+        }
+    }
+}
 
 #s_footer{
     background:#F5F5F5;

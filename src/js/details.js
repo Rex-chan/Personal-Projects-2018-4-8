@@ -1,5 +1,5 @@
 require(['config'],function(){
-    require(['jquery','xzoom'],function($){
+    require(['jquery','xzoom','common'],function($){
         
         let params = decodeURI(location.search).slice(1);
         
@@ -21,7 +21,6 @@ require(['config'],function(){
                 let goods = res.filter(function(item){
                     return item.id  === id;                    
                 });
-                console.log(goods)
                 let $details = $('.main_c_r');
                 let content = goods.map(item=>{
                     return `<div>
@@ -54,24 +53,81 @@ require(['config'],function(){
                     // height:400,
                     // position:'right'
                 });
-                
-                console.log(goods);
                 $buy = $('.buy')
                 
                 $buy.on('click','button',function(){
+                    // let goodslist = Cookie.get('goodslist') || [];
+
+                    // if(typeof goodslist === 'string'){
+                    // goodslist = JSON.parse(goodslist);
+                    // }
+                    // let idx;                
+                    // let has = goodslist.some(function(g,i){
+                    // idx = i;
+                 
+                    // return g.id === id;
+                    // });
+                    // console.log(goodslist)
+                    // if(has){
+                    //     goodslist[idx].qty++;
+                    // }else{
+                    //     let good_item = {
+                    //         id:goods[0].id,
+                    //         descirbe:goods[0].descirbe,
+                    //         price:goods[0].price,
+                    //         url:goods[0].url,
+                    //         qty:1
+                    //     }
+                    // goodslist.push(good_item)
                    
-                    let good_item = {
-                        id:goods[0].id,
-                        descirbe:goods[0].descirbe,
-                        price:goods[0].price,
-                        url:goods[0].url
-                    }
-                document.cookie = 'good_item'+JSON.stringify(good_item);
+                    // }
+                    // document.cookie = 'goodslist'+JSON.stringify(goodslist);
+        let goodscookie=Cookie.get('goodscookie') || [];
+          if(typeof goodscookie==='string'){
+        goodscookie=JSON.parse(goodscookie);
+                  }
+
+        var idx;
+
+        // 查找goodslist中是否已经添加过当前商品
+        var has = goodscookie.some(function(g,i){//0，1，2，3，4
+          // 遍历goodscookie，当得到一个true时，终止遍历
+          idx = i;console.log(idx)
+          return g.id ===id;
+
+        });
+
+        if(has){
+          // 如果存在，则qty++
+          goodscookie[idx].qty++;
+        }else{
+          // 获取商品信息
+        
+          let goodslist={
+          id:goods[0].id,
+          name:goods[0].name,
+          describe:goods[0].describe,
+          url:goods[0].url,
+          price:goods[0].price,
+          sold:goods[0].sold,
+          qty:1
+
+        }
+        goodscookie.push(goodslist);
+}
+console.log(goodscookie)
+ 
+
+                var now=new Date();
+                now.setDate(now.getDate()+7);
+                document.cookie='goodscookie='+JSON.stringify(goodscookie)+';expires=' +now.toUTCString()+';path=/';  
                 });
                 
                 
-            }
-        })
+            }// suscss
+            
+        })// ajax
+
         
         
         
