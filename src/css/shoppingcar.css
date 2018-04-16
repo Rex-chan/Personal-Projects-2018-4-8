@@ -27,6 +27,10 @@ s, i, em {
   text-decoration: none;
 }
 
+ul, li {
+  list-style: none;
+}
+
 /*公共类*/
 .container {
   /*版心 提取 */
@@ -130,52 +134,49 @@ s, i, em {
   width: 100px;
 }
 
-#shoppingcar_mian .list .list_main {
+#shoppingcar_mian .list .list_main .goodsitem {
   line-height: 120px;
-  height: 120px;
   border: 1px solid #fff;
   background: #FDF0EF;
 }
 
-#shoppingcar_mian .list .list_main span {
+#shoppingcar_mian .list .list_main .goodsitem span {
   display: inline-block;
   font-size: 14px;
   text-align: center;
 }
 
-#shoppingcar_mian .list .list_main span:nth-child(1) {
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(1) {
   width: 80px;
 }
 
-#shoppingcar_mian .list .list_main span:nth-child(2) {
-  width: 365px;
-  position: relative;
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(2) {
+  width: 80px;
 }
 
-#shoppingcar_mian .list .list_main span:nth-child(2) img {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(3) {
+  width: 280px;
+  line-height: 30px;
 }
 
-#shoppingcar_mian .list .list_main span:nth-child(3) {
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(4) {
   width: 95px;
 }
 
-#shoppingcar_mian .list .list_main span:nth-child(4) {
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(5) {
   width: 95px;
 }
 
-#shoppingcar_mian .list .list_main span:nth-child(5) {
-  width: 138px;
-}
-
-#shoppingcar_mian .list .list_main span:nth-child(5) {
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(6) {
   width: 120px;
 }
 
-#shoppingcar_mian .list .list_main span:nth-child(6) {
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(7) {
   width: 100px;
+}
+
+#shoppingcar_mian .list .list_main .goodsitem span:nth-child(8) {
+  width: 28px;
 }
 
 #shoppingcar_mian .list .list_count {

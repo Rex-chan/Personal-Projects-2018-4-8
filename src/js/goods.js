@@ -6,7 +6,7 @@ require(['config'],function(){
             $(this).find('.show').show();            
         });
         $ul.on('mouseleave','li',function(){
-            $(this).find('.show').slideToggle(200);
+            $(this).find('.show').hide();
         });
         ajax({
             url:'../api/getdata.php',

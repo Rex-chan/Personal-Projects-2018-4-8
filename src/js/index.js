@@ -57,7 +57,7 @@ require(['config'],function(){
             
         });
         $ul.on('mouseleave','li',function(){
-            $(this).find('.show').slideToggle(200);
+            $(this).find('.show').hide();
         });
         
         

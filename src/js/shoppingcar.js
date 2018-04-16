@@ -1,7 +1,7 @@
 require(['config'],function(){
     require(['jquery','common'],function($){
         $list_main = $('.list_main');
-        var goodslist
+        
         render();
         console.log(randomNumber(1,99))
         function render(){
@@ -23,16 +23,16 @@ require(['config'],function(){
                 // 计算总价
                 total += item.price * item.qty*1;
 
-                return `<span><input type="checkbox" /></span>
+                return `<li class="goodsitem"><span><input type="checkbox" /></span>
                         <span>
-                            <img src="${item.url}" height="80" width="80"/>
-                            ${item.describe}
-                        </span>
+                            <img src="${item.url}" height="80" width="80"/>                           
+                        </span> 
+                        <span>${item.descirbe}</span>
                         <span>中国大陆</span>
                         <span>${item.price}</span>
                         <span>${item.qty}</span>
                         <span>${total}</span>
-                        <span><button>&times;</button></span>`
+                        <span><button>&times;</button></span></li>`
             }).join('');
 
             // 写入前先清空

@@ -13,7 +13,8 @@ a { text-decoration:none; }
 /*a:hover{color:#C81623;}*/
 h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:300;/*font-size:1em*/;}  /*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
 s,i,em{font-style:normal;text-decoration:none;}
-
+ul,li{list-style: none;
+}
 
 /*公共类*/
 .container {  /*版心 提取 */
@@ -61,21 +62,24 @@ s,i,em{font-style:normal;text-decoration:none;}
             span:nth-child(5){width: 120px;}
             span:nth-child(6){width: 100px;}
         }
-        .list_main{line-height: 120px;
-            height: 120px;border:1px solid #fff;background:#FDF0EF;
-            span{display:inline-block;font-size: 14px;text-align:center;}
-            span:nth-child(1){width: 80px;}
-            span:nth-child(2){
-                width: 365px;
-                position:relative;
-                img{position:absolute;top:20px;left:20px}
+        .list_main{
+            .goodsitem{ 
+                line-height: 120px;
+                border:1px solid #fff;background:#FDF0EF;
+                span{display:inline-block;font-size: 14px;text-align:center;}
+                span:nth-child(1){width: 80px;}
+                span:nth-child(2){
+                    width: 80px;
+                    // position:relative;
+                    img{}
+                }
+                span:nth-child(3){width: 280px;line-height: 30px;}
+                span:nth-child(4){width: 95px;}
+                span:nth-child(5){width: 95px;}
+                span:nth-child(6){width: 120px;}
+                span:nth-child(7){width: 100px;}
+                span:nth-child(8){width: 28px;}
             }
-            span:nth-child(3){width: 95px;}
-            span:nth-child(4){width: 95px;}
-            span:nth-child(5){width: 138px;}
-            span:nth-child(5){width: 120px;}
-            span:nth-child(6){width: 100px;}
-        
         }
         .list_count{
             width: 990px;height: 206px;background:skyblue;
