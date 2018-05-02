@@ -1,0 +1,7 @@
+*{margin: 0; padding: 0;}
+a{text-decoration: none;}
+.dk-header{width: 100%; height: 48px; border-bottom: solid 1px;text-align: center;}
+
+.dk-menu{position: absolute; left: 0; top: 48px; width: 120px; bottom: 0; border-right: solid 1px; border-bottom: solid 1px;}
+.dk-menu ul li{padding: 5px 20px;}
+.dk-body{position: absolute; left: 120px; top: 48px; right: 0; bottom: 0; border-right: solid 1px; border-bottom: solid 1px;text-align: center;}
